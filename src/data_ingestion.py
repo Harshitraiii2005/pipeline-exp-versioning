@@ -84,7 +84,7 @@ def save_data(train_df: pd.DataFrame, test_df: pd.DataFrame, data_path: str) -> 
 def main():
     try:
         test_size = 0.2
-        data_path = 'https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEY6G6BHJK5NHBNQ6PK2BMU45A'
+        data_path = 'https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA'
         
         df = load_data(data_url=data_path)
         final_df = preprocess_data(df)

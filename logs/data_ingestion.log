@@ -7,3 +7,13 @@
 2025-05-20 21:30:46,695 - data_ingestion - DEBUG - Data preprocessed successfully
 2025-05-20 21:30:46,855 - data_ingestion - DEBUG - Data saved to ./data\raw
 2025-05-20 21:30:46,855 - data_ingestion - INFO - Data ingestion pipeline completed successfully.
+2025-05-21 01:56:26,363 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEY6G6BHJK5NHBNQ6PK2BMU45A: HTTP Error 404: Not Found
+2025-05-21 01:56:26,363 - data_ingestion - ERROR - Error in main function: HTTP Error 404: Not Found
+2025-05-21 01:58:23,665 - data_ingestion - DEBUG - Data loaded from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA
+2025-05-21 01:58:23,665 - data_ingestion - DEBUG - Data preprocessed successfully
+2025-05-21 01:58:23,824 - data_ingestion - DEBUG - Data saved to ./data\raw
+2025-05-21 01:58:23,824 - data_ingestion - INFO - Data ingestion pipeline completed successfully.
+2025-05-21 01:59:17,247 - data_ingestion - DEBUG - Data loaded from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA
+2025-05-21 01:59:17,247 - data_ingestion - DEBUG - Data preprocessed successfully
+2025-05-21 01:59:17,432 - data_ingestion - DEBUG - Data saved to ./data\raw
+2025-05-21 01:59:17,432 - data_ingestion - INFO - Data ingestion pipeline completed successfully.
