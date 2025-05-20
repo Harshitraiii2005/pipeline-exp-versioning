@@ -1,0 +1,7 @@
+2025-05-20 22:33:12,832 - model_building - ERROR - File not found: params.yaml
+2025-05-20 22:33:12,847 - model_building - ERROR - Failed to complete the model building process: [Errno 2] No such file or directory: 'params.yaml'
+2025-05-20 22:39:35,286 - model_building - DEBUG - Data loaded from ./data/processed/train_tfidf.csv with shape (4008, 51)
+2025-05-20 22:39:35,286 - model_building - DEBUG - Initializing RandomForest model with parameters: {'n_estimators': 25, 'random_state': 2}
+2025-05-20 22:39:35,302 - model_building - DEBUG - Model training started with 4008 samples
+2025-05-20 22:39:35,481 - model_building - DEBUG - Model training completed
+2025-05-20 22:39:35,485 - model_building - DEBUG - Model saved to models/model.pkl

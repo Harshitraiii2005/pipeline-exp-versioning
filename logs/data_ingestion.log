@@ -1,0 +1,9 @@
+2025-05-20 21:25:54,441 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/pipeline-exp-versioning/main/expiriments/spam_ham_dataset.csv: HTTP Error 404: Not Found
+2025-05-20 21:25:54,441 - data_ingestion - ERROR - Error in main function: HTTP Error 404: Not Found
+2025-05-20 21:27:05,049 - data_ingestion - ERROR - Error in main function: name 'data_path' is not defined
+2025-05-20 21:27:45,699 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/pipeline-exp-versioning/main/experiments/spam_ham_dataset.csv: HTTP Error 404: Not Found
+2025-05-20 21:27:45,700 - data_ingestion - ERROR - Error in main function: HTTP Error 404: Not Found
+2025-05-20 21:30:46,684 - data_ingestion - DEBUG - Data loaded from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEY6G6BHJK5NHBNQ6PK2BMU45A
+2025-05-20 21:30:46,695 - data_ingestion - DEBUG - Data preprocessed successfully
+2025-05-20 21:30:46,855 - data_ingestion - DEBUG - Data saved to ./data\raw
+2025-05-20 21:30:46,855 - data_ingestion - INFO - Data ingestion pipeline completed successfully.
