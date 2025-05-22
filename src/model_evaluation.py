@@ -6,6 +6,7 @@ import json
 from sklearn.metrics import accuracy_score, precision_score, recall_score, roc_auc_score
 import logging
 
+
 # Ensure the "logs" directory exists
 log_dir = 'logs'
 os.makedirs(log_dir, exist_ok=True)

@@ -2,6 +2,7 @@ import pandas as pd
 import os
 from sklearn.model_selection import train_test_split
 import logging
+import yaml
 
 # ==========================
 # Logger Configuration
@@ -29,9 +30,23 @@ if not logger.handlers:
     logger.addHandler(console_handler)
     logger.addHandler(file_handler)
 
-# ==========================
-# Data Ingestion Functions
-# ==========================
+def load_params(param_path: str) -> dict:
+    try:
+        with open(param_path, 'r') as file:
+            params = yaml.safe_load(file)
+        logger.debug('Parameters loaded from %s', param_path)
+        return params
+    except FileNotFoundError as e:
+        logger.error('Parameter file not found: %s', param_path)
+        raise
+    except yaml.YAMLError as e:
+        logger.error('Error parsing YAML file: %s', e)
+        raise
+    except Exception as e:
+        logger.error('Error loading parameters: %s', e)
+        raise    
+
+
 
 def load_data(data_url: str) -> pd.DataFrame:
     try:
@@ -77,13 +92,12 @@ def save_data(train_df: pd.DataFrame, test_df: pd.DataFrame, data_path: str) -> 
         logger.error('Error saving data to %s: %s', data_path, e)
         raise
 
-# ==========================
-# Main Function
-# ==========================
 
 def main():
     try:
-        test_size = 0.2
+        params= load_params(param_path='params.yaml')
+        logger.info('Parameters loaded successfully.')
+        test_size = params['data_ingestion']['test_size']
         data_path = 'https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA'
         
         df = load_data(data_url=data_path)
