@@ -94,7 +94,7 @@ def save_data(df: pd.DataFrame, file_path: str) -> None:
 
 def main():
     try:
-        params=load_params(param_path='params.yaml')
+        params=load_params(params_path='params.yaml')
         max_features = params['feature_engineering']['max_features']
         logger.debug('Max features for TF-IDF: %d', max_features)
 

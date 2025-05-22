@@ -10,16 +10,16 @@ import yaml
 log_dir = 'logs'
 os.makedirs(log_dir, exist_ok=True)
 
-# logging configuration
+# Logging configuration
 logger = logging.getLogger('model_building')
-logger.setLevel('DEBUG')
+logger.setLevel(logging.DEBUG)
 
 console_handler = logging.StreamHandler()
-console_handler.setLevel('DEBUG')
+console_handler.setLevel(logging.DEBUG)
 
 log_file_path = os.path.join(log_dir, 'model_building.log')
 file_handler = logging.FileHandler(log_file_path)
-file_handler.setLevel('DEBUG')
+file_handler.setLevel(logging.DEBUG)
 
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 console_handler.setFormatter(formatter)
@@ -29,7 +29,6 @@ logger.addHandler(console_handler)
 logger.addHandler(file_handler)
 
 def load_params(params_path: str) -> dict:
-    """Load parameters from a YAML file."""
     try:
         with open(params_path, 'r') as file:
             params = yaml.safe_load(file)
@@ -45,9 +44,7 @@ def load_params(params_path: str) -> dict:
         logger.error('Unexpected error: %s', e)
         raise
 
-
 def load_data(file_path: str) -> pd.DataFrame:
-
     try:
         df = pd.read_csv(file_path)
         logger.debug('Data loaded from %s with shape %s', file_path, df.shape)
@@ -63,13 +60,15 @@ def load_data(file_path: str) -> pd.DataFrame:
         raise
 
 def train_model(X_train: np.ndarray, y_train: np.ndarray, params: dict) -> RandomForestClassifier:
-   
     try:
         if X_train.shape[0] != y_train.shape[0]:
             raise ValueError("The number of samples in X_train and y_train must be the same.")
         
         logger.debug('Initializing RandomForest model with parameters: %s', params)
-        clf = RandomForestClassifier(n_estimators=params['n_estimators'], random_state=params['random_state'])
+        clf = RandomForestClassifier(
+            n_estimators=params['n_estimators'],
+            random_state=params['random_states']
+        )
         
         logger.debug('Model training started with %d samples', X_train.shape[0])
         clf.fit(X_train, y_train)
@@ -83,34 +82,27 @@ def train_model(X_train: np.ndarray, y_train: np.ndarray, params: dict) -> Rando
         logger.error('Error during model training: %s', e)
         raise
 
-
 def save_model(model, file_path: str) -> None:
-   
     try:
-        # Ensure the directory exists
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
-        
         with open(file_path, 'wb') as file:
             pickle.dump(model, file)
         logger.debug('Model saved to %s', file_path)
-    except FileNotFoundError as e:
-        logger.error('File path not found: %s', e)
-        raise
     except Exception as e:
         logger.error('Error occurred while saving the model: %s', e)
         raise
 
 def main():
     try:
-        params=load_params(param_path='params.yaml')['model_building']
+        params = load_params(params_path='params.yaml')['model_building']
+        
         train_data = load_data('./data/processed/train_tfidf.csv')
         X_train = train_data.iloc[:, :-1].values
         y_train = train_data.iloc[:, -1].values
 
         clf = train_model(X_train, y_train, params)
-        
-        model_save_path = 'models/model.pkl'
-        save_model(clf, model_save_path)
+
+        save_model(clf, 'models/model.pkl')
 
     except Exception as e:
         logger.error('Failed to complete the model building process: %s', e)

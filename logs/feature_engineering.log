@@ -15,3 +15,11 @@
 2025-05-21 02:06:40,453 - feature_engineering - DEBUG - tfidf applied and data transformed
 2025-05-21 02:06:40,589 - feature_engineering - DEBUG - Data saved to ./data\processed\train_tfidf.csv
 2025-05-21 02:06:40,627 - feature_engineering - DEBUG - Data saved to ./data\processed\test_tfidf.csv
+2025-05-22 14:21:06,381 - feature_engineering - ERROR - Failed to complete the feature engineering process: load_params() got an unexpected keyword argument 'param_path'
+2025-05-22 14:24:31,199 - feature_engineering - DEBUG - Parameters retrieved from params.yaml
+2025-05-22 14:24:31,199 - feature_engineering - DEBUG - Max features for TF-IDF: 50
+2025-05-22 14:24:31,251 - feature_engineering - DEBUG - Data loaded and NaNs filled from ./data/interim/train_processed.csv
+2025-05-22 14:24:31,288 - feature_engineering - DEBUG - Data loaded and NaNs filled from ./data/interim/test_processed.csv
+2025-05-22 14:24:34,291 - feature_engineering - DEBUG - tfidf applied and data transformed
+2025-05-22 14:24:34,442 - feature_engineering - DEBUG - Data saved to ./data\processed\train_tfidf.csv
+2025-05-22 14:24:34,473 - feature_engineering - DEBUG - Data saved to ./data\processed\test_tfidf.csv

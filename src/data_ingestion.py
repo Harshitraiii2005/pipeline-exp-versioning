@@ -98,9 +98,8 @@ def main():
         params= load_params(param_path='params.yaml')
         logger.info('Parameters loaded successfully.')
         test_size = params['data_ingestion']['test_size']
-        data_path = 'https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA'
-        
-        df = load_data(data_url=data_path)
+        data_path = 'experiments/spam_ham_dataset.csv'
+        df = load_data(data_path)
         final_df = preprocess_data(df)
         train_df, test_df = train_test_split(final_df, test_size=test_size, random_state=42)
         save_data(train_df, test_df, data_path='./data')

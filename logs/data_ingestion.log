@@ -17,3 +17,32 @@
 2025-05-21 01:59:17,247 - data_ingestion - DEBUG - Data preprocessed successfully
 2025-05-21 01:59:17,432 - data_ingestion - DEBUG - Data saved to ./data\raw
 2025-05-21 01:59:17,432 - data_ingestion - INFO - Data ingestion pipeline completed successfully.
+2025-05-22 13:49:45,946 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 13:49:45,946 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 13:49:46,965 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA: HTTP Error 404: Not Found
+2025-05-22 13:49:46,965 - data_ingestion - ERROR - Error in main function: HTTP Error 404: Not Found
+2025-05-22 13:50:42,344 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 13:50:42,344 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 13:52:49,210 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>
+2025-05-22 13:52:49,225 - data_ingestion - ERROR - Error in main function: <urlopen error [WinError 10051] A socket operation was attempted to an unreachable network>
+2025-05-22 14:14:56,931 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 14:14:56,931 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 14:14:57,510 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYUOW7ZQXEBSKLWIRS2BM4YCA: HTTP Error 404: Not Found
+2025-05-22 14:14:57,510 - data_ingestion - ERROR - Error in main function: HTTP Error 404: Not Found
+2025-05-22 14:15:37,764 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 14:15:37,764 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 14:15:38,264 - data_ingestion - ERROR - Error loading data from https://raw.githubusercontent.com/Harshitraiii2005/datasets/refs/heads/main/spam_ham_dataset.csv?token=GHSAT0AAAAAADEBHFEYY5RJRJNAHWAOI4XC2BO4QQQ: HTTP Error 404: Not Found
+2025-05-22 14:15:38,264 - data_ingestion - ERROR - Error in main function: HTTP Error 404: Not Found
+2025-05-22 14:16:52,209 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 14:16:52,210 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 14:16:52,210 - data_ingestion - ERROR - Error in main function: name 'df' is not defined
+2025-05-22 14:17:55,322 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 14:17:55,322 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 14:17:55,324 - data_ingestion - ERROR - Error loading data from experiments/spam_ham_dataset.csv: [Errno 2] No such file or directory: 'experiments/spam_ham_dataset.csv'
+2025-05-22 14:17:55,324 - data_ingestion - ERROR - Error in main function: [Errno 2] No such file or directory: 'experiments/spam_ham_dataset.csv'
+2025-05-22 14:21:03,763 - data_ingestion - DEBUG - Parameters loaded from params.yaml
+2025-05-22 14:21:03,763 - data_ingestion - INFO - Parameters loaded successfully.
+2025-05-22 14:21:03,836 - data_ingestion - DEBUG - Data loaded from experiments/spam_ham_dataset.csv
+2025-05-22 14:21:03,853 - data_ingestion - DEBUG - Data preprocessed successfully
+2025-05-22 14:21:04,015 - data_ingestion - DEBUG - Data saved to ./data\raw
+2025-05-22 14:21:04,015 - data_ingestion - INFO - Data ingestion pipeline completed successfully.
